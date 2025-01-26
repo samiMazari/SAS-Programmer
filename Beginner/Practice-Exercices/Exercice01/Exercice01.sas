@@ -20,14 +20,14 @@ LIBNAME  in   "Z:\Documents\path" ;
 
 /*  Excel au format 2007   */
 PROC IMPORT  OUT=IN.BREVET1
-DATAFILE="Z:\Documents\Cours-Paris-XII\TD\SAS\Chapitre1\BREVET1.xlsx"
+DATAFILE="Z:\Documents\path"
 DBMS=xlsx
 REPLACE;
 RUN;
 
 /*  Excel au format 2003   */
 PROC IMPORT  OUT=IN.BREVET
-DATAFILE="Z:\Documents\Cours-Paris-XII\TD\SAS\Chapitre1\BREVET.xls"
+DATAFILE="Z:\Documents\path"
 DBMS=xls
 REPLACE;
 RUN;
@@ -46,7 +46,7 @@ proc print data=in.brevet1; run;
 /********************/
 
 PROC IMPORT  OUT=IN.TEMP1
-DATAFILE="Z:\Documents\Cours-Paris-XII\TD\SAS\Chapitre1\BREVET3.xls"
+DATAFILE="Z:\Documents\path"
 DBMS=xls
 REPLACE;
 SHEET="BREVET";
@@ -54,7 +54,7 @@ MIXED=Yes;
 RUN;
 
 PROC IMPORT  OUT=TEMP
-DATAFILE="Z:\Documents\Cours-Paris-XII\TD\SAS\Chapitre1\BREVET3.xls"
+DATAFILE="Z:\Documents\path"
 DBMS=xls
 REPLACE;
 SHEET="BREVET1";
@@ -84,7 +84,7 @@ proc contents data=   temp ; run;
 /********************/
 
 Data temp;
-Infile "Z:\Documents\Cours-Paris-XII\TD\SAS\Chapitre1\BREVET1.csv" dlm=";";
+Infile "Z:\Documents\path\BREVET1.csv" dlm=";";
 Input pays  brevet_2004 brevet_2005;
 Run;
 

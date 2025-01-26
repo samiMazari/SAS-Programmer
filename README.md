@@ -1,7 +1,7 @@
 # SAS-Programmer
 
 <div style="text-align: center;">
-    <img src=".gitignore/logo.jpg" alt="Image description" width="900" height="150">
+    <img src=".gitignore/logo.jpg" alt="Image description" width="850" height="150">
 </div>
 
 

@@ -1,6 +1,6 @@
 /***************************************************/
 /*                                                 */
-/*           Exercices chapitre 4                    */
+/*           Exercice 04                           */
 /*                                                 */
 /***************************************************/
 
@@ -8,7 +8,7 @@
 
 /** Question 1 **/
 DM "CLEAR OUTPUT ; CLEAR log ; " ;
-LIBNAME  in   "D:\Mes documents\Cours SAS\chapitre4" ;
+LIBNAME  in   "D:\Documents\Path" ;
 
 
 /******************************************************/
@@ -17,7 +17,7 @@ LIBNAME  in   "D:\Mes documents\Cours SAS\chapitre4" ;
 /**                                                  **/
 /******************************************************/
 
-/** Questions 2 et 3 : Création d'une table temporaire **/
+/** Questions 2 et 3 : CrÃ©ation d'une table temporaire **/
 data temp; set in.production;
 keep ide an va k l w nace_1;
 
@@ -29,7 +29,7 @@ proc contents; run;
 
 Proc means data=temp; run;
 
-/** Question 5 calcul pour va k l de la moyenne, de la médiane et de l'écart type par année secteur **/
+/** Question 5 calcul pour va k l de la moyenne, de la mÃ©diane et de l'Ã©cart type par annÃ©e secteur **/
 
 proc sort data=temp;
 by an nace_1;
@@ -52,8 +52,8 @@ by an nace_1;
 drop _Type_ _freq_;
 run;
 
-/** questions 7 et 8 écart entre la productivité apparente du travail par firme/année et 
-    la moyenne/médiane par an/seteur de cette productivité **/
+/** questions 7 et 8 Ã©cart entre la productivitÃ© apparente du travail par firme/annÃ©e et 
+    la moyenne/mÃ©diane par an/seteur de cette productivitÃ© **/
 
 Data temp; set temp;
 Pl=va/l;
@@ -92,11 +92,11 @@ run;
 
 proc univariate data=temp1 noprint;
 by an;
-histogram va l k/ vaxislabel="Fréquences";
+histogram va l k/ vaxislabel="FrÃ©quences";
 run;
 
 
-/** Qestion 3 histogramme + médaillon de statistiques pour L **/
+/** Qestion 3 histogramme + mÃ©daillon de statistiques pour L **/
 
 
 data temp2; set temp;
@@ -104,13 +104,13 @@ if L<=900;
 run;
 
 proc univariate data=temp2 noprint;
-histogram l/ normal vaxislabel="Fréquences" ;
+histogram l/ normal vaxislabel="FrÃ©quences" ;
 Inset n="Nombre d'observations" mean= "Moyenne des effectifs" 
-          p1= "1er décile"
+          p1= "1er dÃ©cile"
           P25="1er quartile"
-          P50="médiane" 
-          P99= "99ème décile"
-         / header='Caractéristiques du facteur travail'
+          P50="mÃ©diane" 
+          P99= "99Ã¨me dÃ©cile"
+         / header='CaractÃ©ristiques du facteur travail'
            position=ne format=6.2;
 
 run;
@@ -131,7 +131,7 @@ run;
 
 
 
-/* Question 2 table de fréquence */
+/* Question 2 table de frÃ©quence */
 Proc freq data=temp3;
 tables taille; 
 run;
@@ -159,7 +159,7 @@ run;
 
 Proc freq data=temp3;
 tables an*taille/ chisq;
-title "Test d'indépendance"; 
+title "Test d'indÃ©pendance"; 
 run;
 
-/** rejet de Ho d'indépendance des deux variables **/
+/** rejet de Ho d'indÃ©pendance des deux variables **/

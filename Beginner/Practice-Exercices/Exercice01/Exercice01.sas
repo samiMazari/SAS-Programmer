@@ -7,7 +7,7 @@
 
 
 DM "CLEAR OUTPUT ; CLEAR log ; " ;
-LIBNAME  in   "Z:\Documents\Cours-Paris-XII\TD\SAS\Chapitre1" ;
+LIBNAME  in   "Z:\Documents\path" ;
 
 
 

@@ -12,12 +12,12 @@ LIBNAME  in   "Z:\Documents\Cours-Paris-XII\TD\SAS\Chapitre2" ;
 
 
 /********************/
-/** Excercice n°1  **/
+/** Excercice nÂ°1  **/
 /********************/
 
 
 
-/*  Création de FX et de Temp    */
+/*  CrÃ©ation de FX et de Temp    */
 
 DATA IN.FX;
 INPUT ANNEE TRIMESTRE VENTES PUB;
@@ -68,7 +68,7 @@ IF ANNEE=2009 THEN Dum09=1; Else Dum09=0;
 IF ANNEE=2010 THEN Dum10=1; Else Dum10=0;
  Run;
 
-/* Procédure alternative  */
+/* ProcÃ©dure alternative  */
 Data Temp; Set Temp;
 Dum1A=0; Dum2A=0; Dum3A=0; Dum4A=0; Dum09A=0; Dum10A=0; PB=0;
 Select;
@@ -86,7 +86,7 @@ Otherwise         Pb=1;
 End;
 Run;
 
-/* Exercice n°2 */
+/* Exercice nÂ°2 */
 
 /* Questions 1, 2 et 3 */
 
@@ -120,7 +120,7 @@ Drop Ventes Pub;
 Run;
 
 
-/* Exercice n°3  */
+/* Exercice nÂ°3  */
 
 /* Questions 1 et 2  */
 

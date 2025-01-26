@@ -7,7 +7,8 @@
 
 
 DM "CLEAR OUTPUT ; CLEAR log ; " ;
-LIBNAME  in   "Z:\Documents\Cours-Paris-XII\TD\SAS\Chapitre3" ;
+/* Write Your Path  */
+LIBNAME  in   "Z:\Documents\path"  ;
 
 
 
@@ -36,7 +37,7 @@ proc print data=temp3; run;
 /********************/
 
 
-LIBNAME  in1   "Z:\Documents\Cours-Paris-XII\TD\SAS\Chapitre2" ;
+LIBNAME  in1   "Z:\Documents\Path ;
 
 
 /* Question 1 */

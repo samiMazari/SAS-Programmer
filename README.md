@@ -23,7 +23,6 @@ The repository includes:
 - **Intermediate Modules**: Data manipulation, cleaning, and visualization techniques.  
 - **Advanced Modules**: Advanced SAS procedures, macro programming, and optimization techniques.  
 - **Practice Exercises**: Hands-on tasks to reinforce learning.  
-- **Certification Tips**: Key insights and strategies for tackling the SAS Certification exam.  
 
 ---
 
